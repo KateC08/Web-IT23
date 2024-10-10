@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        
+        <div class="header">
+            <div class="header-Left">
+                <a class="logo">KC</a>
+            </div>
+        <div class="header-Right">
+            <a href="homepage.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact us</a>
+            <a class="active" href="services.html">Services</a>
+                 
+        </div>
+    </div>
+
+    </header>
+
+    <div class="services-container">
+        <h2>Our Services</h2>
+        <p>At KC Photography, we offer a wide range of photography services tailored to meet your needs. Whether you're looking to capture special moments or need professional imagery for your business, we’ve got you covered!</p>
+        
+        <h3>Our Services Include:</h3>
+        <ul>
+            <li><strong>Weddings:</strong> Capture the magic of your special day with our wedding photography services.</li>
+            <li><strong>Portraits:</strong> Personal and family portraits that reflect your unique personality.</li>
+            <li><strong>Event Photography:</strong> From birthdays to corporate events, we document every moment.</li>
+            <li><strong>Commercial Photography:</strong> High-quality images for your business needs, including product photography.</li>
+            <li><strong>Editing Services:</strong> Professional editing to enhance your images to perfection.</li>
+        </ul>
+
+        <p>Contact us today to discuss your photography needs and let us help you capture those precious moments!</p>
+    </div>
+
+    <script>
+        // Check if user is logged in
+        if (!localStorage.getItem('loggedIn')) {
+            window.location.href = "login.html";
+        }
+
+        document.getElementById('logout').addEventListener('click', function() {
+            localStorage.removeItem('loggedIn');
+            window.location.href = "login.html";
+        });
+    </script>
+</body>
+</html>
