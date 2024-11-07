@@ -26,7 +26,7 @@ body {
     font-size: 25px;
 }
 
-.header a:hover {
+.header-Right a:hover {
     background-color: rgb(71, 71, 71);
     color: white;
 }
@@ -38,6 +38,39 @@ body {
 
 .header-Right {
     float: right;
+}
+
+.logo {
+    font-size: 24px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: black; /* Change as needed */
+    position: relative; /* Needed for dropdown positioning */
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%; /* Aligns below the logo */
+    background-color: white; /* Change as needed */
+    min-width: 160px;
+    z-index: 1;
+   
+}
+.dropdown-content a {
+    color: black; /* Change as needed */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .home-container, .info-container {
@@ -62,3 +95,5 @@ p {
     color: #111010;
     line-height: 1.6;
 }
+
+

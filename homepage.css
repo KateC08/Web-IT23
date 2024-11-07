@@ -39,7 +39,7 @@ body {
     font-size: 25px;
 }
 
-.header a:hover {
+.header-Right a:hover {
     background-color: rgb(71, 71, 71);
     color: white;
 }
@@ -53,6 +53,40 @@ body {
     float: right;
 }
 
+
+.logo {
+    font-size: 24px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: black; /* Change as needed */
+    position: relative; /* Needed for dropdown positioning */
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%; /* Aligns below the logo */
+    background-color: white; /* Change as needed */
+    min-width: 160px;
+    z-index: 1;
+   
+}
+.dropdown-content a {
+    color: black; /* Change as needed */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .home-container, .info-container {
     max-width: 800px;
     margin: 40px auto;
@@ -62,6 +96,7 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+
 
 h2 {
     color: #333;
@@ -117,9 +152,62 @@ p {
     0%, 100% { opacity: 0; }
     50% { opacity: 1; }
 }
+
+.cont {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: center;
+}
+
+.card {
+    position: relative; /* Enable absolute positioning for the title */
+    margin-right: 5px;
+    margin-bottom: 10px; /* Space between rows */
+    height: 380px; /* Card height */
+    width: 180px; /* Card width */
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #f4f4f4; /* Card border */
+    overflow: hidden; /* Prevent overflow */
+    transition: flex-grow 0.3s ease, transform 0.3s ease; /* Transition for growth and scaling */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.card img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Match border radius */
+    display: block; /* Prevent inline spacing issues */
+}
+
+.title {
+    position: absolute; /* Position title absolutely */
+    bottom: 20px; /* Position slightly higher for better visibility */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center align */
+    color: white; /* White text color */
+    padding: 8px 12px; /* Add some padding */
+    border-radius: 5px; /* Slightly rounded corners */
+    font-size: 18px; /* Font size */
+    text-align: center; /* Center the text */
+    width: calc(100% - 20px); /* Full width minus padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.card:hover {
+    flex-grow: 2; /* Grow when hovered */
+    transform: scale(1.05); /* Slightly scale up */
+    border-color: #007BFF; /* Change border color on hover */
+}
+.p1 {
+    font-size: medium;
+  }
 .gallery {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px; /* Add spacing between galleries */
 }
 
 .image-container {
@@ -128,15 +216,36 @@ p {
     overflow: hidden;
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    height: 350px; /* Fixed height */
 }
 
 .image-container img {
     width: 100%;
-    height: auto;
+    height: 100%; /* Set height to fill container */
+    object-fit: cover; /* Ensure images cover the container without distortion */
     transition: transform 0.3s; /* Smooth zoom effect */
 }
 
 .image-container:hover img {
     transform: scale(1.05); /* Zoom on hover */
 }
+
+.gallery-line {
+    border: none; /* Remove default border */
+    height: 2px; /* Thickness of the line */
+    background-color: #727171; /* Color of the line */
+    margin-top: 5px; /* Space between image and line */
+    width: 98%; /* Full width */
+    
+}
+
+.footer{
+    position:unset;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
 

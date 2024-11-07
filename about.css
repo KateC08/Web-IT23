@@ -26,7 +26,7 @@ body {
     font-size: 25px;
 }
 
-.header a:hover {
+.header-Right a:hover {
     background-color: rgb(71, 71, 71);
     color: white;
 }
@@ -40,6 +40,39 @@ body {
     float: right;
 }
 
+.logo {
+    font-size: 24px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: black; /* Change as needed */
+    position: relative; /* Needed for dropdown positioning */
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%; /* Aligns below the logo */
+    background-color: white; /* Change as needed */
+    min-width: 160px;
+    z-index: 1;
+   
+}
+.dropdown-content a {
+    color: black; /* Change as needed */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .home-container {
     max-width: 800px;
     margin: 40px auto;
@@ -50,12 +83,32 @@ body {
     text-align: center;
 }
 
-h2 {
-    color: #333;
+
+.parent {
+    border: 2px solid #ccc; /* Border around the parent container */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding inside the border */
+    display: flex; /* Enable flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    text-align: center; /* Center text within the container */
 }
 
-p {
-    color: #111010;
-    line-height: 1.6;
-    font-size: medium;
+.image {
+    display: flex; /* Enable flexbox for child elements */
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: left;
 }
+
+.image img {
+    width: 450px; /* Set a fixed width for the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.image p {
+    margin: 0; /* Remove default margin */
+}
+
+
