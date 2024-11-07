@@ -108,7 +108,6 @@ body {
 }
 
 .image p {
-    margin: 0; /* Remove default margin */
+    margin: 0; 
+
 }
-
-
